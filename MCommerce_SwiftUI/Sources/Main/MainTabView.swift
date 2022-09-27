@@ -9,33 +9,31 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-        NavigationView {
-            TabView {
-                HomeView()
-                    .tabItem {
-                        Image(systemName: "house")
-                    }
-                
-                DepartmentView()
-                    .tabItem {
-                        Image(systemName: "list.triangle")
-                    }
-                
-                WishlistView()
-                    .tabItem {
-                        Image(systemName: "heart")
-                    }
-                
-                CartView()
-                    .tabItem {
-                        Image(systemName: "cart")
-                    }
-                
-                ProfileView()
-                    .tabItem {
-                        Image(systemName: "person")
-                    }
-            }
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house")
+                }
+            
+            DepartmentView()
+                .tabItem {
+                    Image(systemName: "list.triangle")
+                }
+            
+            WishlistView()
+                .tabItem {
+                    Image(systemName: "heart")
+                }
+            
+            CartView()
+                .tabItem {
+                    Image(systemName: "cart")
+                }
+            
+            ProfileView()
+                .tabItem {
+                    Image(systemName: "person")
+                }
         }
     }
 }

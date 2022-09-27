@@ -9,7 +9,39 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Home View")
+        NavigationView {
+            ScrollView {
+                VStack {
+                    
+                    Spacer()
+                }.padding(.top)
+                
+                
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            HStack {
+                                Button {
+                                    print("==> Menu...")
+                                } label: {
+                                    Image(systemName: "line.3.horizontal")
+                                        .foregroundColor(.black)
+                                }
+                            }
+                        }
+                        
+                        ToolbarItem(placement: .principal) {
+                            Image("logo-helio")
+                                .resizable()
+                                .renderingMode(.template)
+                                .foregroundColor(.black)
+                                .scaledToFit()
+                                .frame(height: 44)
+                        }
+                    }
+            }
+        }
+        
     }
 }
 

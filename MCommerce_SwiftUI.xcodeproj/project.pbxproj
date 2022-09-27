@@ -11,6 +11,12 @@
 		BDEB9D5328E284D60071993D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D5228E284D60071993D /* ContentView.swift */; };
 		BDEB9D5528E284D70071993D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDEB9D5428E284D70071993D /* Assets.xcassets */; };
 		BDEB9D5828E284D70071993D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDEB9D5728E284D70071993D /* Preview Assets.xcassets */; };
+		BDEB9D6528E2884D0071993D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D6428E2884D0071993D /* MainTabView.swift */; };
+		BDEB9D6B28E28A020071993D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D6A28E28A020071993D /* HomeView.swift */; };
+		BDEB9D6D28E28A0C0071993D /* DepartmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D6C28E28A0C0071993D /* DepartmentView.swift */; };
+		BDEB9D6F28E28A160071993D /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D6E28E28A150071993D /* WishlistView.swift */; };
+		BDEB9D7228E28A220071993D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D7128E28A220071993D /* CartView.swift */; };
+		BDEB9D7428E28A290071993D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D7328E28A290071993D /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		BDEB9D5228E284D60071993D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDEB9D5428E284D70071993D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDEB9D5728E284D70071993D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BDEB9D6428E2884D0071993D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		BDEB9D6A28E28A020071993D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BDEB9D6C28E28A0C0071993D /* DepartmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentView.swift; sourceTree = "<group>"; };
+		BDEB9D6E28E28A150071993D /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
+		BDEB9D7128E28A220071993D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		BDEB9D7328E28A290071993D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +63,10 @@
 		BDEB9D4F28E284D60071993D /* MCommerce_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				BDEB9D5028E284D60071993D /* MCommerce_SwiftUIApp.swift */,
-				BDEB9D5228E284D60071993D /* ContentView.swift */,
-				BDEB9D5428E284D70071993D /* Assets.xcassets */,
+				BDEB9D6028E287530071993D /* Commoms */,
+				BDEB9D6128E2875E0071993D /* Scenes */,
+				BDEB9D5F28E2874E0071993D /* Resources */,
+				BDEB9D5E28E287480071993D /* Sources */,
 				BDEB9D5628E284D70071993D /* Preview Content */,
 			);
 			path = MCommerce_SwiftUI;
@@ -65,6 +78,91 @@
 				BDEB9D5728E284D70071993D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BDEB9D5E28E287480071993D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB9D6328E2882E0071993D /* Main */,
+				BDEB9D5028E284D60071993D /* MCommerce_SwiftUIApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BDEB9D5F28E2874E0071993D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB9D5428E284D70071993D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDEB9D6028E287530071993D /* Commoms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commoms;
+			sourceTree = "<group>";
+		};
+		BDEB9D6128E2875E0071993D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB9D6228E287910071993D /* Home */,
+				BDEB9D6628E289CD0071993D /* Department */,
+				BDEB9D6728E289D40071993D /* Wishlist */,
+				BDEB9D6828E289DD0071993D /* Cart */,
+				BDEB9D6928E289E30071993D /* Profile */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BDEB9D6228E287910071993D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB9D6A28E28A020071993D /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BDEB9D6328E2882E0071993D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB9D5228E284D60071993D /* ContentView.swift */,
+				BDEB9D6428E2884D0071993D /* MainTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BDEB9D6628E289CD0071993D /* Department */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB9D6C28E28A0C0071993D /* DepartmentView.swift */,
+			);
+			path = Department;
+			sourceTree = "<group>";
+		};
+		BDEB9D6728E289D40071993D /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB9D6E28E28A150071993D /* WishlistView.swift */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		BDEB9D6828E289DD0071993D /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB9D7128E28A220071993D /* CartView.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		BDEB9D6928E289E30071993D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BDEB9D7328E28A290071993D /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEB9D7428E28A290071993D /* ProfileView.swift in Sources */,
+				BDEB9D6528E2884D0071993D /* MainTabView.swift in Sources */,
+				BDEB9D7228E28A220071993D /* CartView.swift in Sources */,
+				BDEB9D6F28E28A160071993D /* WishlistView.swift in Sources */,
+				BDEB9D6D28E28A0C0071993D /* DepartmentView.swift in Sources */,
+				BDEB9D6B28E28A020071993D /* HomeView.swift in Sources */,
 				BDEB9D5328E284D60071993D /* ContentView.swift in Sources */,
 				BDEB9D5128E284D60071993D /* MCommerce_SwiftUIApp.swift in Sources */,
 			);

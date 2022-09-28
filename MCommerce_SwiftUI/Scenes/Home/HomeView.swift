@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @ObservedObject var viewModel = HomeViewModel()
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -39,6 +42,9 @@ struct HomeView: View {
                                 .frame(height: 44)
                         }
                     }
+            }
+            .onAppear {
+                viewModel.fetch()
             }
         }
         

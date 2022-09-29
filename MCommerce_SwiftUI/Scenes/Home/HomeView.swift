@@ -13,7 +13,7 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack {
                     if let homeModel = viewModel.homeModel,
                        let sections = homeModel.masculine.sections {
@@ -32,6 +32,12 @@ struct HomeView: View {
                                 case.categories:
                                     CategoriesCell(section: section)
                                     
+                                case .listWideImage:
+                                    ListWideImageCell(section: section)
+                                    
+                                case .bubbles:
+                                    BubblesCell(section: section)
+                                    
                                 default:
                                     Rectangle()
                                         .foregroundColor(.clear)
@@ -41,7 +47,9 @@ struct HomeView: View {
                     }
                     
                     Spacer()
-                }.padding(.top)
+                }
+                .padding(.top)
+                .padding(.bottom, 24)
                 
                 
                     .navigationBarTitleDisplayMode(.inline)

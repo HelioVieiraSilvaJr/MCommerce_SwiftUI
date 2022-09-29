@@ -17,6 +17,7 @@ struct HomeDepartmentModel: Decodable {
         case listSmallImage
         case categories
         case listWideImage
+        case bubbles
         case listServices
         case none
         
@@ -36,6 +37,7 @@ struct HomeDepartmentModel: Decodable {
     struct Item: Identifiable, Decodable {
         let id = UUID()
         let image: String
+        var title: String? = nil
         let text: String?
         let deeplink: String
     }

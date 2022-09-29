@@ -20,7 +20,7 @@ struct SingleWideImageCell: View {
                 KFImage(URL(string: item.image))
                     .resizable()
                     .scaledToFill()
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, 16)
                     .padding(.vertical, 20)
             }
 

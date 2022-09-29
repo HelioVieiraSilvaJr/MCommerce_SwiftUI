@@ -19,7 +19,7 @@ struct ListSmallImageCell: View {
                 .font(.title3)
                 .padding(.bottom, 16)
             
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .top, spacing: 16) {
                     ForEach(section.items) { item in
                         Button {
@@ -44,7 +44,7 @@ struct ListSmallImageCell: View {
                 }
             }
         }
-        .padding(.leading, 24)
+        .padding(.leading, 16)
         .padding(.bottom, 12)
     }
 }

@@ -14,8 +14,9 @@ final class HomeViewModel: ObservableObject {
     
     func fetch() {
         service.fetch { homeModel in
-            print("==> Success: \(homeModel)")
-            self.homeModel = homeModel
+            DispatchQueue.main.async {
+                self.homeModel = homeModel                
+            }
         } failure: { error in
             print("==> Error: \(error.localizedDescription)")
         }

@@ -29,12 +29,14 @@ struct HomeDepartmentModel: Decodable {
     struct Section: Identifiable, Decodable {
         let id = UUID()
         let type: CellType
+        let title: String?
         let items: [Item]
     }
     
     struct Item: Identifiable, Decodable {
         let id = UUID()
         let image: String
+        let text: String?
         let deeplink: String
     }
 }

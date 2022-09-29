@@ -17,7 +17,8 @@ struct SingleWideImageView: View {
             KFImage(URL(string: item.image))
                 .resizable()
                 .scaledToFill()
-                .padding()
+                .padding(.horizontal, 24)
+                .padding(.vertical, 20)
         }
     }
 }

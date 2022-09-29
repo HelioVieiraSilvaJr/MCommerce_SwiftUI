@@ -26,9 +26,12 @@ struct HomeView: View {
                                 case .singleWideImage:
                                     SingleWideImageView(section: section)
                                     
+                                case .listSmallImage:
+                                    ListSmallImageView(section: section)
+                                    
                                 default:
                                     Rectangle()
-                                        .foregroundColor(.blue)
+                                        .foregroundColor(.clear)
                                 }
                             }
                         }

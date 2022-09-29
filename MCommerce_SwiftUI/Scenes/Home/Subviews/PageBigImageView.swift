@@ -44,12 +44,14 @@ struct PageBigImageView: View {
 struct PageBigImageView_Previews: PreviewProvider {
     static var previews: some View {
         PageBigImageView(section: HomeDepartmentModel.Section(type: .pageBigImage,
+                                                              title: nil,
                                                               items: mockItems()))
     }
     
     static func mockItems() -> [HomeDepartmentModel.Item] {
         return [
             HomeDepartmentModel.Item(image: "https://images.cea-ecommerce.com.br/home/contents/2020_nova-estacao-v2-w16/iphone/dirXHDPI/nova-estacao-v2.png",
+                                     text: "Ta bombando!",
                                      deeplink: "https://wa.me/551135852892")
         ]
     }

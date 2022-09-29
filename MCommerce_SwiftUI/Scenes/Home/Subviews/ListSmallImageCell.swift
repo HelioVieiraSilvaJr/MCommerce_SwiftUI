@@ -1,5 +1,5 @@
 //
-//  ListSmallImageView.swift
+//  ListSmallImageCell.swift
 //  MCommerce_SwiftUI
 //
 //  Created by Helio Junior on 28/09/22.
@@ -8,32 +8,38 @@
 import SwiftUI
 import Kingfisher
 
-struct ListSmallImageView: View {
+struct ListSmallImageCell: View {
+    
     let section: HomeDepartmentModel.Section
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(section.title ?? "")
                 .foregroundColor(.black)
-                .font(.title2)
+                .font(.title3)
                 .padding(.bottom, 16)
             
             ScrollView(.horizontal) {
                 LazyHStack(alignment: .top, spacing: 16) {
                     ForEach(section.items) { item in
-                        VStack {
-                            KFImage(URL(string: item.image))
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 120, height: 140)
-                                .clipped()
-                            
-                            Text(item.text ?? "")
-                                .foregroundColor(.black)
-                                .font(.caption)
-                                .lineLimit(2)
-                                .frame(width: 100)
+                        Button {
+                            print("==> Click: \(item.text ?? "?")")
+                        } label: {
+                            VStack {
+                                KFImage(URL(string: item.image))
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 120, height: 140)
+                                    .clipped()
+                                
+                                Text(item.text ?? "")
+                                    .foregroundColor(.black)
+                                    .font(.caption)
+                                    .lineLimit(2)
+                                    .frame(width: 100)
+                            }
                         }
+
                     }
                 }
             }
@@ -45,7 +51,7 @@ struct ListSmallImageView: View {
 
 struct ListSmallImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ListSmallImageView(section: HomeDepartmentModel.Section(type: .listSmallImage,
+        ListSmallImageCell(section: HomeDepartmentModel.Section(type: .listSmallImage,
                                                                 title: "Ta bombando!",
                                                                 items: mockItems()))
     }

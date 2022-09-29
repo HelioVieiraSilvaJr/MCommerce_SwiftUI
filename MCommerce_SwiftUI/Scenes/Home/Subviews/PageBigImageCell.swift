@@ -1,5 +1,5 @@
 //
-//  PageBigImageView.swift
+//  PageBigImageCell.swift
 //  MCommerce_SwiftUI
 //
 //  Created by Helio Junior on 28/09/22.
@@ -8,7 +8,8 @@
 import SwiftUI
 import Kingfisher
 
-struct PageBigImageView: View {
+struct PageBigImageCell: View {
+    
     let section: HomeDepartmentModel.Section
     @State private var pageSelected = 1
     
@@ -17,12 +18,17 @@ struct PageBigImageView: View {
             TabView {
                 ForEach(0 ..< section.items.count) { index in
                     if let item = section.items[index] {
-                        KFImage(URL(string: item.image))
-                            .resizable()
-                            .scaledToFill()
-                            .onAppear {
-                                pageSelected = index
-                            }
+                        Button {
+                            print("==> Click, deeplink: \(item.deeplink)")
+                        } label: {
+                            KFImage(URL(string: item.image))
+                                .resizable()
+                                .scaledToFill()
+                                .onAppear {
+                                    pageSelected = index
+                                }
+                        }
+
                     }
                 }
             }
@@ -43,7 +49,7 @@ struct PageBigImageView: View {
 
 struct PageBigImageView_Previews: PreviewProvider {
     static var previews: some View {
-        PageBigImageView(section: HomeDepartmentModel.Section(type: .pageBigImage,
+        PageBigImageCell(section: HomeDepartmentModel.Section(type: .pageBigImage,
                                                               title: nil,
                                                               items: mockItems()))
     }

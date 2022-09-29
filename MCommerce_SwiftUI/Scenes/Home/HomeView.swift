@@ -21,13 +21,16 @@ struct HomeView: View {
                             ForEach(sections) { section in
                                 switch section.type {
                                 case .pageBigImage:
-                                    PageBigImageView(section: section)
+                                    PageBigImageCell(section: section)
                                     
                                 case .singleWideImage:
-                                    SingleWideImageView(section: section)
+                                    SingleWideImageCell(section: section)
                                     
                                 case .listSmallImage:
-                                    ListSmallImageView(section: section)
+                                    ListSmallImageCell(section: section)
+                                    
+                                case.categories:
+                                    CategoriesCell(section: section)
                                     
                                 default:
                                     Rectangle()

@@ -8,6 +8,6 @@
 import Foundation
 
 struct HomeModel: Decodable {
-    let masculine: [String]
-    let feminine: [String]
+    let masculine: HomeDepartmentModel
+    let feminine: HomeDepartmentModel
 }

@@ -15,6 +15,24 @@ struct HomeView: View {
         NavigationView {
             ScrollView {
                 VStack {
+                    if let homeModel = viewModel.homeModel,
+                       let sections = homeModel.masculine.sections {
+                        LazyVStack {
+                            ForEach(sections) { section in
+                                switch section.type {
+                                case .pageBigImage:
+                                    PageBigImageView(section: section)
+                                    
+                                case .singleWideImage:
+                                    SingleWideImageView(section: section)
+                                    
+                                default:
+                                    Rectangle()
+                                        .foregroundColor(.blue)
+                                }
+                            }
+                        }
+                    }
                     
                     Spacer()
                 }.padding(.top)
@@ -39,7 +57,7 @@ struct HomeView: View {
                                 .renderingMode(.template)
                                 .foregroundColor(.black)
                                 .scaledToFit()
-                                .frame(height: 44)
+                                .frame(height: 42)
                         }
                     }
             }

@@ -10,10 +10,12 @@ import Foundation
 final class HomeViewModel: ObservableObject {
     
     private let service = HomeService()
+    @Published var homeModel: HomeModel?
     
     func fetch() {
         service.fetch { homeModel in
             print("==> Success: \(homeModel)")
+            self.homeModel = homeModel
         } failure: { error in
             print("==> Error: \(error.localizedDescription)")
         }

@@ -16,10 +16,15 @@ struct PageBigImageCell: View {
     var body: some View {
         VStack {
             TabView {
-                ForEach(0 ..< section.items.count) { index in
+                let itemsCount = section.items.count
+                ForEach(0 ..< itemsCount) { index in
                     if let item = section.items[index] {
-                        Button {
-                            print("==> Click, deeplink: \(item.deeplink)")
+                        
+                        let object: [String: Any] = ["favoritesCount": 22, "keyStorage": "vinteDois"]
+                        let deeplink = DeeplinkManager.getDestinationView(from: item.deeplink, object: object)
+                        
+                        NavigationLink {
+                            deeplink.destination
                         } label: {
                             KFImage(URL(string: item.image))
                                 .resizable()
@@ -28,6 +33,7 @@ struct PageBigImageCell: View {
                                     pageSelected = index
                                 }
                         }
+                        .disabled(deeplink.isDisabled)
 
                     }
                 }

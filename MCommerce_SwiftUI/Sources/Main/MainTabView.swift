@@ -20,7 +20,7 @@ struct MainTabView: View {
                     Image(systemName: "list.triangle")
                 }
             
-            WishlistView()
+            WishlistView(params: [:])
                 .tabItem {
                     Image(systemName: "heart")
                 }

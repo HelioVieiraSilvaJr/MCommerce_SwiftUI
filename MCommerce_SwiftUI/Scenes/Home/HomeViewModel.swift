@@ -12,6 +12,10 @@ final class HomeViewModel: ObservableObject {
     private let service = HomeService()
     @Published var homeModel: HomeModel?
     
+    init() {
+        fetch()
+    }
+    
     func fetch() {
         service.fetch { homeModel in
             DispatchQueue.main.async {

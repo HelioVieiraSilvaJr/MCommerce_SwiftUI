@@ -7,7 +7,7 @@
 
 import Foundation
 
-let URL_BASE = "localhost"
+let URL_BASE = "192.168.15.3"
 
 class Network: HTTPProtocol {
     private var requestTask: URLSessionDataTaskProtocol?

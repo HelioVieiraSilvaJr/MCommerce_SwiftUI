@@ -44,6 +44,8 @@
 		BDEB9D6F28E28A160071993D /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D6E28E28A150071993D /* WishlistView.swift */; };
 		BDEB9D7228E28A220071993D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D7128E28A220071993D /* CartView.swift */; };
 		BDEB9D7428E28A290071993D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D7328E28A290071993D /* ProfileView.swift */; };
+		BDEE30BB28FBBC9100FAB7DF /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE30BA28FBBC9100FAB7DF /* Palette.swift */; };
+		BDEE30BE28FBBF2400FAB7DF /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE30BD28FBBF2400FAB7DF /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		BDEB9D6E28E28A150071993D /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
 		BDEB9D7128E28A220071993D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		BDEB9D7328E28A290071993D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BDEE30BA28FBBC9100FAB7DF /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		BDEE30BD28FBBF2400FAB7DF /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				BDAB553728EBE832005BBE55 /* URL+Extensions.swift */,
+				BDEE30BD28FBBF2400FAB7DF /* Color+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 		BDEB9D5F28E2874E0071993D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BDEE30B928FBBC6400FAB7DF /* DesignSystem */,
 				BDEB9D5428E284D70071993D /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -307,6 +313,14 @@
 				BDEB9D7328E28A290071993D /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		BDEE30B928FBBC6400FAB7DF /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE30BA28FBBC9100FAB7DF /* Palette.swift */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +410,7 @@
 				BD07CF0328E62304001B2FCD /* ListWideImageCell.swift in Sources */,
 				BDEB9D7428E28A290071993D /* ProfileView.swift in Sources */,
 				BDEB9D6528E2884D0071993D /* MainTabView.swift in Sources */,
+				BDEE30BE28FBBF2400FAB7DF /* Color+Extensions.swift in Sources */,
 				BD5F83F828E34EB6001F5E4D /* HTTPMethod.swift in Sources */,
 				BDEB9D7228E28A220071993D /* CartView.swift in Sources */,
 				BD5F83FA28E34EFC001F5E4D /* HeaderBuilder.swift in Sources */,
@@ -412,6 +427,7 @@
 				BD5F83F128E2B147001F5E4D /* HomeViewModel.swift in Sources */,
 				BDAB553528EBE2E5005BBE55 /* DeeplinkManager.swift in Sources */,
 				BD5F840728E35604001F5E4D /* ConnectionCheck.swift in Sources */,
+				BDEE30BB28FBBC9100FAB7DF /* Palette.swift in Sources */,
 				BDBE1D4F28E53D0900EDC92D /* PageControl.swift in Sources */,
 				BDEB9D5328E284D60071993D /* ContentView.swift in Sources */,
 				BD5F83F328E34D62001F5E4D /* Network.swift in Sources */,
@@ -547,6 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MCommerce_SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 4KBYJ4JT96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -576,6 +593,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MCommerce_SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 4KBYJ4JT96;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

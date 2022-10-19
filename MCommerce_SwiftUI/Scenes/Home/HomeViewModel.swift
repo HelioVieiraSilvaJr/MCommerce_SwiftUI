@@ -17,8 +17,10 @@ final class HomeViewModel: ObservableObject {
     }
     
     func fetch() {
+        print("==> Chamou os dados: HOME")
         service.fetch { homeModel in
             DispatchQueue.main.async {
+                print("==> Chegou os dados: HOME")
                 self.homeModel = homeModel                
             }
         } failure: { error in

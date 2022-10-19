@@ -44,8 +44,12 @@
 		BDEB9D6F28E28A160071993D /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D6E28E28A150071993D /* WishlistView.swift */; };
 		BDEB9D7228E28A220071993D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D7128E28A220071993D /* CartView.swift */; };
 		BDEB9D7428E28A290071993D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEB9D7328E28A290071993D /* ProfileView.swift */; };
-		BDEE30BB28FBBC9100FAB7DF /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE30BA28FBBC9100FAB7DF /* Palette.swift */; };
 		BDEE30BE28FBBF2400FAB7DF /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE30BD28FBBF2400FAB7DF /* Color+Extensions.swift */; };
+		BDEE30C228FBC34700FAB7DF /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE30C128FBC34700FAB7DF /* ProductListView.swift */; };
+		BDEE30C528FBC40A00FAB7DF /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE30C428FBC40A00FAB7DF /* ProductModel.swift */; };
+		BDEE30C828FBC5A500FAB7DF /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE30C728FBC5A500FAB7DF /* ProductDetailView.swift */; };
+		BDEE30CB28FC429A00FAB7DF /* ProductSearchParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE30CA28FC429A00FAB7DF /* ProductSearchParams.swift */; };
+		BDEE30CD28FC435800FAB7DF /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEE30CC28FC435800FAB7DF /* ProductListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,8 +90,12 @@
 		BDEB9D6E28E28A150071993D /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
 		BDEB9D7128E28A220071993D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		BDEB9D7328E28A290071993D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		BDEE30BA28FBBC9100FAB7DF /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		BDEE30BD28FBBF2400FAB7DF /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		BDEE30C128FBC34700FAB7DF /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		BDEE30C428FBC40A00FAB7DF /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		BDEE30C728FBC5A500FAB7DF /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		BDEE30CA28FC429A00FAB7DF /* ProductSearchParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchParams.swift; sourceTree = "<group>"; };
+		BDEE30CC28FC435800FAB7DF /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +251,7 @@
 		BDEB9D6028E287530071993D /* Commoms */ = {
 			isa = PBXGroup;
 			children = (
+				BDEE30C928FC428C00FAB7DF /* Models */,
 				BDAB553928EBECA3005BBE55 /* Utils */,
 				BDAB553628EBE81B005BBE55 /* Extensions */,
 				BDBE1D4C28E53CEF00EDC92D /* Subviews */,
@@ -253,6 +262,7 @@
 		BDEB9D6128E2875E0071993D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BDEE30BF28FBC32B00FAB7DF /* Product */,
 				BDEB9D6228E287910071993D /* Home */,
 				BDEB9D6628E289CD0071993D /* Department */,
 				BDEB9D6728E289D40071993D /* Wishlist */,
@@ -318,9 +328,51 @@
 		BDEE30B928FBBC6400FAB7DF /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				BDEE30BA28FBBC9100FAB7DF /* Palette.swift */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		BDEE30BF28FBC32B00FAB7DF /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE30C328FBC3FE00FAB7DF /* Models */,
+				BDEE30C028FBC33300FAB7DF /* List */,
+				BDEE30C628FBC59000FAB7DF /* Detail */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		BDEE30C028FBC33300FAB7DF /* List */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE30C128FBC34700FAB7DF /* ProductListView.swift */,
+				BDEE30CC28FC435800FAB7DF /* ProductListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		BDEE30C328FBC3FE00FAB7DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE30C428FBC40A00FAB7DF /* ProductModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BDEE30C628FBC59000FAB7DF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE30C728FBC5A500FAB7DF /* ProductDetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		BDEE30C928FC428C00FAB7DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BDEE30CA28FC429A00FAB7DF /* ProductSearchParams.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +457,7 @@
 				BD5F840E28E4052D001F5E4D /* HomeDepartmentModel.swift in Sources */,
 				BD5F840B28E35628001F5E4D /* HTTPDecodeBuilder.swift in Sources */,
 				BD5F840328E351FE001F5E4D /* URLSessionProtocol.swift in Sources */,
+				BDEE30CD28FC435800FAB7DF /* ProductListViewModel.swift in Sources */,
 				BD5F840128E351F8001F5E4D /* HTTPProtocol.swift in Sources */,
 				BDBE1D4628E48FD100EDC92D /* SingleWideImageCell.swift in Sources */,
 				BD07CF0328E62304001B2FCD /* ListWideImageCell.swift in Sources */,
@@ -414,25 +467,28 @@
 				BD5F83F828E34EB6001F5E4D /* HTTPMethod.swift in Sources */,
 				BDEB9D7228E28A220071993D /* CartView.swift in Sources */,
 				BD5F83FA28E34EFC001F5E4D /* HeaderBuilder.swift in Sources */,
+				BDEE30CB28FC429A00FAB7DF /* ProductSearchParams.swift in Sources */,
 				BD5F83F628E34DB4001F5E4D /* RequestBuilder.swift in Sources */,
 				BDBE1D4828E48FE700EDC92D /* ListSmallImageCell.swift in Sources */,
 				BDAB553B28EBECC5005BBE55 /* LazyView.swift in Sources */,
 				BDEB9D6F28E28A160071993D /* WishlistView.swift in Sources */,
+				BDEE30C528FBC40A00FAB7DF /* ProductModel.swift in Sources */,
 				BD5F83EC28E2AE3C001F5E4D /* HomeService.swift in Sources */,
 				BDEB9D6D28E28A0C0071993D /* DepartmentView.swift in Sources */,
 				BD5F840928E35617001F5E4D /* ErrorResponseBuilder.swift in Sources */,
+				BDEE30C828FBC5A500FAB7DF /* ProductDetailView.swift in Sources */,
 				BD07CF0528E63A29001B2FCD /* BubblesCell.swift in Sources */,
 				BDEB9D6B28E28A020071993D /* HomeView.swift in Sources */,
 				BDAB553828EBE832005BBE55 /* URL+Extensions.swift in Sources */,
 				BD5F83F128E2B147001F5E4D /* HomeViewModel.swift in Sources */,
 				BDAB553528EBE2E5005BBE55 /* DeeplinkManager.swift in Sources */,
 				BD5F840728E35604001F5E4D /* ConnectionCheck.swift in Sources */,
-				BDEE30BB28FBBC9100FAB7DF /* Palette.swift in Sources */,
 				BDBE1D4F28E53D0900EDC92D /* PageControl.swift in Sources */,
 				BDEB9D5328E284D60071993D /* ContentView.swift in Sources */,
 				BD5F83F328E34D62001F5E4D /* Network.swift in Sources */,
 				BD5F83FC28E350E1001F5E4D /* ResponseResult.swift in Sources */,
 				BD07CF0128E5EDD2001B2FCD /* CategoriesCell.swift in Sources */,
+				BDEE30C228FBC34700FAB7DF /* ProductListView.swift in Sources */,
 				BDEB9D5128E284D60071993D /* MCommerce_SwiftUIApp.swift in Sources */,
 				BD5F83EE28E2B0BB001F5E4D /* HomeModel.swift in Sources */,
 			);
@@ -571,7 +627,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,7 +657,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

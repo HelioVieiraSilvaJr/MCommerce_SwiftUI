@@ -51,7 +51,6 @@ struct HomeView: View {
                 .padding(.top)
                 .padding(.bottom, 24)
                 
-                
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
@@ -74,9 +73,10 @@ struct HomeView: View {
                                 .frame(height: 42)
                         }
                     }
+                    .navigationTitle("Home")
             }
+            
         }
-        
     }
 }
 

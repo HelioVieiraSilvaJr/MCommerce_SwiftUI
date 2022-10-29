@@ -28,7 +28,7 @@ struct DeeplinkManager {
         
         switch destination {
         case .products:
-            let testSearch = ProductSearchParams(queryText: "blusa", queryCollection: nil)
+            let testSearch = ProductSearchParams(text: "blusa", collection: nil)
             view = AnyView(LazyView(ProductListView(searchParams: testSearch)))
 
         case .product:

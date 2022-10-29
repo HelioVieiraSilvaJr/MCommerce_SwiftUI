@@ -8,6 +8,6 @@
 import Foundation
 
 struct ProductSearchParams {
-    let queryText: String?
-    let queryCollection: String?
+    let text: String?
+    let collection: String?
 }

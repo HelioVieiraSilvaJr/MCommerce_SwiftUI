@@ -10,16 +10,26 @@ import Foundation
 final class ProductListViewModel: ObservableObject {
     
     private let searchParams: ProductSearchParams
-    @Published var products: [ProductModel] = []
+    @Published var productsCount: Int = 0
+    @Published var products: [ProductListModel.Product] = []
+    private let service: ProductListService
     
-    init(searchParams: ProductSearchParams) {
+    init(searchParams: ProductSearchParams, service: ProductListService = ProductListService()) {
         self.searchParams = searchParams
-        fetchProducts()
+        self.service = service
+        if let searchText = searchParams.text {
+            fetchProductsWith(text: searchText)
+        }
     }
     
-    func fetchProducts() {
-        let testProducts = [1,2,3,4,5].map({ _ in ProductModel(imageLink: "") })
-        
-        products = testProducts
+    func fetchProductsWith(text: String) {
+        service.fetchProductsWith(text: text) { model in
+            DispatchQueue.main.async {
+                self.productsCount = model.count
+                self.products = model.products
+            }
+        } failure: { error in
+            print("==> Error: \(error.localizedDescription)")
+        }
     }
 }
